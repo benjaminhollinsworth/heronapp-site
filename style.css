@@ -1,0 +1,26 @@
+/* Heron's website: plain pages, in Heron's colours and type, readable on a phone. */
+:root {
+  --ink: #1a2233;
+  --muted: #4a5568;
+  --deep-water: #10264c;
+  --sky-050: #eef5fb;
+  --rule: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+h1 { font-size: 32px; line-height: 1.2; color: var(--deep-water); margin: 8px 0 12px; }
+h2 { font-size: 20px; color: var(--deep-water); margin: 40px 0 8px; }
+.lead { font-size: 19px; color: var(--muted); }
+.draft { display: inline-block; font-size: 14px; background: var(--sky-050); color: var(--deep-water); padding: 4px 10px; border-radius: 999px; }
+a { color: var(--deep-water); }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--rule); }
+th { color: var(--muted); font-weight: 600; }
