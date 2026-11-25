@@ -8,15 +8,16 @@
 </head>
 <body>
 <main>
-<p class="draft">Draft, November 2026. Shared with families in Heron’s test group.</p>
+<p class="draft">Draft, updated 25 November 2026. Shared with families in Heron’s test group.</p>
 <h1>Privacy notice</h1>
 <p class="lead">Heron reads the school emails you forward to it and turns them into a list of what needs doing. This page says what Heron keeps, why, who helps run it, and what you can do about it.</p>
 
 <h2>In short</h2>
 <ul>
 <li>Heron’s systems read your school emails to make your list. People at Heron don’t.</li>
-<li>The AI that reads your emails is never told who your family is, and an email that mentions one of your children by name is never sent to it.</li>
-<li>You can delete your account, and everything Heron has for your family, from Settings. Every copy goes, including the original emails, and from backups within a month.</li>
+<li>The AI that reads your emails is never told who your family is, and never learns from them. An email that mentions one of your children by name is never sent to it. Attachments, like a newsletter, are read as they are, so they can include names.</li>
+<li>You can delete your account, and everything Heron has for your family, from Settings. Every copy goes, including the original emails, and from backups within a week.</li>
+<li>Heron counts how the app is used, to see what works, never what your emails or tasks say. You can turn this off in Settings.</li>
 <li>Heron never sells your data, shows you adverts or tracks you across other apps.</li>
 </ul>
 
@@ -35,6 +36,7 @@
 <tr><td>What you do in Heron: ticks, plans, reminders, who’s doing what, your clubs and activities</td><td>The app itself, shared with your family</td><td>Contract</td></tr>
 <tr><td>Photos of your children, if you add them</td><td>Telling children apart at a glance</td><td>Your consent, which you can withdraw by removing them</td></tr>
 <tr><td>Your phone’s notification token</td><td>Sending you notifications</td><td>Contract</td></tr>
+<tr><td>How you use Heron: when you open it, the screens and setting-up steps you reach, what you tick or plan, and when your school emails arrive. Never what your emails or tasks say</td><td>Seeing whether Heron works, and where people get stuck</td><td>Legitimate interests: improving Heron. You can turn it off in Settings</td></tr>
 <tr><td>Reports of things that went wrong in the app</td><td>Fixing them</td><td>Legitimate interests: keeping Heron working</td></tr>
 <tr><td>Another parent’s name and email address, if you invite them</td><td>Sending them your invitation</td><td>Legitimate interests: sharing the school admin with them</td></tr>
 <tr><td>Your email address and school, if you join the waiting list</td><td>Telling you when Heron is open for your school</td><td>Legitimate interests</td></tr>
@@ -43,8 +45,14 @@
 <p>School emails can mention your child’s health or needs. Heron doesn’t look for this, and keeps it only as part of the email you forwarded. If you’d rather it didn’t, don’t forward that email, or ask Heron to delete it at <a href="mailto:support@heronapp.co.uk">support@heronapp.co.uk</a>.</p>
 
 <h2>How Heron reads your emails</h2>
-<p>Heron uses AI (Anthropic’s Claude) to read the school emails you forward. The AI is told about the school, never about your family. An email that mentions one of your children by name is kept out, and never sent to it. Names inside attachments, like a letter sent as a PDF, aren’t checked yet.</p>
+<p>Heron uses AI (Anthropic’s Claude) to read the school emails you forward. The AI is told about the school, never about your family. An email that mentions one of your children by name is kept out, and never sent to it. Attachments, like a newsletter sent as a PDF, are read as they are, so they can include your children’s names.</p>
+<p>Anthropic doesn’t use what Heron sends it to train its AI, and deletes it within 30 days, unless it’s flagged as breaking Anthropic’s rules on use or the law requires it to be kept longer.</p>
+<p>Heron also reads what your children’s schools publish on their websites, like newsletters and class blogs, once for each school, and gives each family there what applies to them. Nothing you forward is ever shared with another family.</p>
 <p>Nobody at Heron reads your emails. If something goes wrong, Ben looks at the record of what Heron did with an email, like when it arrived and whether it was read, not at what it said. The only exception is if you ask about a specific email, and then only that one.</p>
+
+<h2>How Heron counts what’s used</h2>
+<p>To see whether Heron works and where people get stuck, Heron counts how it’s used, with PostHog. You appear there as a random code, never your name or email address, and nothing you or your school wrote is sent. Your IP address is discarded and your location isn’t recorded.</p>
+<p>It’s on unless you turn it off: Settings, Your account, Usage statistics, Stop sharing. If you delete your account, the counts stay, so Heron’s record of how it was used stays true, but nothing links them to you any more.</p>
 
 <h2>Who helps run Heron</h2>
 <table>
@@ -53,6 +61,7 @@
 <tr><td>Supabase</td><td>Stores Heron’s data and runs its services</td><td>London</td></tr>
 <tr><td>Amazon Web Services</td><td>Receives your forwarded emails, deleting its copy as soon as Heron has it</td><td>London</td></tr>
 <tr><td>Anthropic</td><td>Reads school emails, without being told who your family is</td><td>United States</td></tr>
+<tr><td>PostHog</td><td>Counts how Heron is used, with nothing that identifies you</td><td>Germany</td></tr>
 <tr><td>Resend</td><td>Sends Heron’s own emails, like your sign-in code</td><td>Ireland</td></tr>
 <tr><td>Expo, Apple and Google</td><td>Deliver notifications to your phone</td><td>United States</td></tr>
 <tr><td>ImprovMX</td><td>Forwards emails sent to support@heronapp.co.uk</td><td>EU and United States</td></tr>
@@ -63,7 +72,8 @@
 <ul>
 <li>The school emails you forward, and what Heron found in them: until you delete your account. This will be shorter before Heron opens more widely, and you’ll be told first.</li>
 <li>Everything else: until you delete it, or your account.</li>
-<li>Backups: a few recent copies of Heron’s data, on an encrypted computer only Ben uses, so Heron can recover from a mistake. Each is deleted after 30 days, so something you delete is gone from them within a month.</li>
+<li>Usage counts: kept, with nothing linking them to you once your account is deleted.</li>
+<li>Backups: a daily copy of Heron’s database, kept by Supabase in London for 7 days, so Heron can recover from a mistake. Something you delete is gone from them within a week.</li>
 </ul>
 
 <h2>Your rights</h2>
